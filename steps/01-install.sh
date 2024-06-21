@@ -62,6 +62,11 @@ case "$TARGET_OS" in
           MUSL_VERSION="aarch64-linux-musl-cross"
           PACKAGES="g++-10"
           ;;
+
+        loongarch64)
+          MUSL_VERSION="loongarch64-linux-musl-cross"
+          PACKAGES="g++-10"
+          ;;
       esac
 
       [ -d "$MUSL_VERSION" ] || curl -L "$MUSL_URL/$MUSL_VERSION.tgz" | tar xz
@@ -87,6 +92,10 @@ case "$TARGET_OS" in
           ;;
 
         x64)
+          sudo apt-get install -y g++
+          ;;
+
+        loongarch64)
           sudo apt-get install -y g++
           ;;
       esac

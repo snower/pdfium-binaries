@@ -89,6 +89,13 @@ case "$OS" in
           CAN_RUN_ON_HOST=true
         fi
         ;;
+      loongarch64)
+        if [ "$TARGET_LIBC" == "musl" ]; then
+          PREFIX="loongarch64-linux-musl-"
+        else
+          CAN_RUN_ON_HOST=true
+        fi
+        ;;
     esac
     CMAKE_ARGS+=(
       -D CMAKE_C_COMPILER="${PREFIX:-}gcc${SUFFIX:-}"
