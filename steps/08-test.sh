@@ -89,9 +89,9 @@ case "$OS" in
           CAN_RUN_ON_HOST=true
         fi
         ;;
-      loongarch64)
+      loong64)
         if [ "$TARGET_LIBC" == "musl" ]; then
-          PREFIX="loongarch64-linux-musl-"
+          PREFIX="loong64-linux-musl-"
         else
           CAN_RUN_ON_HOST=true
         fi

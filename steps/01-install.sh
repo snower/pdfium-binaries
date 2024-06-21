@@ -63,8 +63,8 @@ case "$TARGET_OS" in
           PACKAGES="g++-10"
           ;;
 
-        loongarch64)
-          MUSL_VERSION="loongarch64-linux-musl-cross"
+        loong64)
+          MUSL_VERSION="loong64-linux-musl-cross"
           PACKAGES="g++-10"
           ;;
       esac
@@ -95,7 +95,7 @@ case "$TARGET_OS" in
           sudo apt-get install -y g++
           ;;
 
-        loongarch64)
+        loong64)
           sudo apt-get install -y g++
           ;;
       esac

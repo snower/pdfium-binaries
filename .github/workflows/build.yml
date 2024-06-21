@@ -28,7 +28,7 @@ on:
         type: string
         required: true
       target_cpu:
-        description: Target (CPU arm|arm64|x64|x86|wasm|loongarch64)
+        description: Target (CPU arm|arm64|x64|x86|wasm|loong64)
         type: string
         required: true
       target_libc:
