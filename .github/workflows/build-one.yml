@@ -30,6 +30,7 @@ on:
           - x64
           - x86
           - wasm
+          - loongarch64
       target_libc:
         description: Target libc
         type: choice
