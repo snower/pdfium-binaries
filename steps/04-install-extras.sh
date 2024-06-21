@@ -14,7 +14,7 @@ case "$OS" in
         unsquashfs -d build/linux/debian_bullseye_loong64-sysroot -no-xattrs build/linux/debian_bullseye_loong64-sysroot.squashfs usr/bin usr/sbin usr/include usr/lib usr/lib64 usr/share lib lib64 etc debian
         rm -rf build/linux/debian_bullseye_loong64-sysroot.squashfs
         ;;
-      case *)
+      *)
         build/linux/sysroot_scripts/install-sysroot.py "--arch=$CPU"
         ;;
     esac
