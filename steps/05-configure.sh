@@ -39,6 +39,7 @@ mkdir -p "$BUILD"
       ;;
     linux)
       echo "clang_use_chrome_plugins = false"
+      [ "$TARGET_CPU" == "loong64" ] && echo 'is_clang = false'
       ;;
     mac)
       echo 'mac_deployment_target = "10.13.0"'
