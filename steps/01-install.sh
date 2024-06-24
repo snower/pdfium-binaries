@@ -97,12 +97,12 @@ case "$TARGET_OS" in
 
         loong64)
           sudo apt-get install -y g++-multilib
-          wget -q -c -O build/toolchain/linux/x86_64-cross-tools-loongarch64-binutils_2.42-gcc_14.1.0-glibc_2.39.tar.xz https://github.com/loongson/build-tools/releases/download/2024.06.01/x86_64-cross-tools-loongarch64-binutils_2.42-gcc_14.1.0-glibc_2.39.tar.xz
-          mkdir build/toolchain/linux/x86_64-cross-tools-loongarch64
-          tar -xf build/toolchain/linux/x86_64-cross-tools-loongarch64-binutils_2.42-gcc_14.1.0-glibc_2.39.tar.xz -C build/toolchain/linux/x86_64-cross-tools-loongarch64
-          rm -rf build/toolchain/linux/x86_64-cross-tools-loongarch64-binutils_2.42-gcc_14.1.0-glibc_2.39.tar.xz
-          echo "$PWD/build/toolchain/linux/x86_64-cross-tools-loongarch64/cross-tools/bin" >> "$PATH_FILE"
-          echo "$PWD/build/toolchain/linux/x86_64-cross-tools-loongarch64/cross-tools/loongarch64-unknown-linux-gnu/bin" >> "$PATH_FILE"
+          wget -q -c -O x86_64-cross-tools-loongarch64-binutils_2.42-gcc_14.1.0-glibc_2.39.tar.xz https://github.com/loongson/build-tools/releases/download/2024.06.01/x86_64-cross-tools-loongarch64-binutils_2.42-gcc_14.1.0-glibc_2.39.tar.xz
+          mkdir x86_64-cross-tools-loongarch64
+          tar -xf x86_64-cross-tools-loongarch64-binutils_2.42-gcc_14.1.0-glibc_2.39.tar.xz -C x86_64-cross-tools-loongarch64
+          rm -rf x86_64-cross-tools-loongarch64-binutils_2.42-gcc_14.1.0-glibc_2.39.tar.xz
+          echo "$PWD/x86_64-cross-tools-loongarch64/cross-tools/bin" >> "$PATH_FILE"
+          echo "$PWD/x86_64-cross-tools-loongarch64/cross-tools/loongarch64-unknown-linux-gnu/bin" >> "$PATH_FILE"
           ;;
       esac
 
