@@ -5,6 +5,12 @@ BUILD_DIR=${PDFium_BUILD_DIR:-$SOURCE/out}
 TARGET_CPU=${PDFium_TARGET_CPU:?}
 IS_DEBUG=${PDFium_IS_DEBUG:-false}
 
+if [ "$TARGET_CPU" == "loong64" ]; then
+  rm -rf third_party/libc++
+  git clone https://github.com/Chilledheart/libcxx.git third_party/libc++
+  git -C third_party/libc++ checkout fix_with_gcc14
+fi
+
 ninja -C "$BUILD_DIR" pdfium
 
 if [ "$TARGET_CPU" == "wasm" ]; then
